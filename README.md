@@ -1,4 +1,5 @@
 # Unity Notes
+Always check [the docs](https://docs.unity3d.com/)
 
 ## Sprites
 When you edited a sprite, to make it as a template, put it in the Assets/Prefab folder, from the SampleScene list.
