@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
 
@@ -18,6 +18,7 @@ public class EnnemyHealth : MonoBehaviour
     }
 
     public void DetectDeath() {
+        // Kill game object when health is down
         if (currentHealth <= 0) {
             Destroy(gameObject);
         }

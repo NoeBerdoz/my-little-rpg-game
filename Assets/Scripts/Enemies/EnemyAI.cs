@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
     private enum State {
         Roaming
     }
 
     private State state;
-    private EnnemyPathfinding ennemyPathfinding;
+    private EnemyPathfinding enemyPathfinding;
 
     private void Awake() {
-        ennemyPathfinding = GetComponent<EnnemyPathfinding>();
+        enemyPathfinding = GetComponent<EnemyPathfinding>();
         state = State.Roaming;
     }
 
@@ -29,7 +29,7 @@ public class EnnemyAI : MonoBehaviour
         {
             // Get random position every 2 seconds
             Vector2 roamPosition = GetRoamingPosition();
-            ennemyPathfinding.MoveTo(roamPosition);
+            enemyPathfinding.MoveTo(roamPosition);
             yield return new WaitForSeconds(2f);
         }
     }
