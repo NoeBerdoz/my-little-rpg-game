@@ -7,14 +7,18 @@ public class EnemyPathfinding : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
 
     private Rigidbody2D rb;
-
     private Vector2 moveDirection;
+    private Knockback knockback;
 
     private void Awake() {
+        knockback = GetComponent<Knockback>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate() {
+        // Don't move position on knocked back
+        if (knockback.gettingKnockedBack) { return; }
+        
         rb.MovePosition(rb.position + moveDirection * (moveSpeed * Time.fixedDeltaTime)); // fixedDeltaTime for framerates independance
     }
 
