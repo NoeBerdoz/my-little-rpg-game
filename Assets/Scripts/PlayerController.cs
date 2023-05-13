@@ -46,12 +46,9 @@ public class PlayerController : MonoBehaviour
 
         myAnimator.SetFloat("moveX", movement.x);
         myAnimator.SetFloat("moveY", movement.y);
-
-        Debug.Log(movement.x);
     }
 
     private void Move() {
-        Debug.Log("hello");
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime)); // fixedDeltaTime for framerates independance
     }
 
