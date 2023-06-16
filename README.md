@@ -1,6 +1,16 @@
 # Unity Notes
 Always check [the docs](https://docs.unity3d.com/)
 
+## Codes
+
+```C#
+    [SerializeField] private int myValue = 10;
+```
+The [SerializeField] attribute in C# is used in Unity to indicate that a field should be serialized by the Unity editor.
+
+In Unity, serialization is the process of converting the state of an object into a format that can be stored, transmitted, or saved in the Unity editor. 
+This allows you to set the value of the field through the Unity editor interface.
+
 ## Sprites
 When you edited a sprite, to make it as a template, put it in the Assets/Prefab folder, from the SampleScene list.
 
@@ -75,3 +85,38 @@ You can add Event on animations that will call a specific function on a setted t
 This file type let's you set inputs Controllers, for example setting W for moving up, S for down, etc...
 You add an action map, then set an action with a key binding.
 
+## Useful Unity built-in functions
+
+### Awake()
+This function is called on an object when it is instantiated in the scene, before any Start() or Update() functions are called. The goal of the Awake() function is to initialize any data or components that the object needs in order to function properly, before any other scripts or functions start running.
+
+### Start()
+The goal of the Start() function is to initialize any data or components that require the object to be fully initialized before they can be set up, such as objects that depend on other objects or components.
+The Start() function is typically used for tasks that need to be performed once at the beginning of an object's lifetime, such as setting up initial game state, initializing data structures, or performing other setup tasks that require the object to be fully initialized.
+
+### Update()
+The goal of the Update() function is to update the state of the object and perform any necessary computations or calculations for the current frame.
+The Update() function is typically used for tasks that need to be performed every frame, such as updating the position or orientation of an object, checking for user input, or performing physics calculations. The Update() function is also commonly used for animations and other visual effects, as well as for managing game logic and state.
+
+### ForceMode2D.Impulse
+Leave feedback
+Add an instant force impulse to the rigidbody2D, using its mass.
+Apply the impulse force instantly. This mode depends on the mass of rigidbody so more force must be applied to move higher-mass objects the same amount as lower-mass objects.
+This mode is useful for applying forces that happen instantly, such as forces from explosions or collisions.
+
+### Coroutine
+Anytime that you need something to work for only X amount of time, you need to set up a Coroutine
+Coroutines are defined using the IEnumerator return type
+Coroutine have to be called with *StartCoroutine()*
+in Coroutines the *yield return* statement is a key feature in coroutines that allows for sequential execution, pausing, and nesting of coroutines.
+
+# Game Assets
+## Free
+https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack
+https://game-endeavor.itch.io/mystic-woods
+https://arks.itch.io/dino-characters
+https://clembod.itch.io/warrior-free-animation-set
+https://penzilla.itch.io/hooded-protagonist
+## Not free
+https://clembod.itch.io/cultist-enemy-pack 7.50$ (the Twisted one for invisible character)
+https://rafaelmatos.itch.io/epic-rpg-world-pack-old-prison-asset-tileset (What about the traps, could be a good idea to implement, like trap events)
