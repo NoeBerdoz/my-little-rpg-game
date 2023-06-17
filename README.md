@@ -3,6 +3,8 @@ Always check [the docs](https://docs.unity3d.com/)
 
 ## Codes
 
+public attributes starts with a capitalized carater, private don't 
+
 ```C#
     [SerializeField] private int myValue = 10;
 ```

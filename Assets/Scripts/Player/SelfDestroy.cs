@@ -13,11 +13,11 @@ public class SelfDestroy : MonoBehaviour
     private void Update() {
         // Remove death particles on its end animation
         if (ps && !ps.IsAlive()) {
-            DestroySelf();
+            DestroySelfAnimEvent();
         }
     }
 
-    public void DestroySelf() {
+    public void DestroySelfAnimEvent() {
         Destroy(gameObject);
     }
 }

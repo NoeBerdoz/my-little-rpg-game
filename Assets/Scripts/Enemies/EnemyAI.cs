@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    [SerializeField] private float roamChangeDirFloat = 2f;
+
     private enum State {
         Roaming
     }
@@ -27,10 +29,10 @@ public class EnemyAI : MonoBehaviour
     private IEnumerator RoamingRoutine() {
         while (state == State.Roaming) 
         {
-            // Get random position every 2 seconds
+            // Get random position every given time with roamChangeDirFloat
             Vector2 roamPosition = GetRoamingPosition();
             enemyPathfinding.MoveTo(roamPosition);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(roamChangeDirFloat);
         }
     }
 

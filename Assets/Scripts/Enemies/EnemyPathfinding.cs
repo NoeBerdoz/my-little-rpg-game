@@ -17,7 +17,7 @@ public class EnemyPathfinding : MonoBehaviour
 
     private void FixedUpdate() {
         // Don't move position on knocked back
-        if (knockback.gettingKnockedBack) { return; }
+        if (knockback.GettingKnockedBack) { return; }
         
         rb.MovePosition(rb.position + moveDirection * (moveSpeed * Time.fixedDeltaTime)); // fixedDeltaTime for framerates independance
     }
