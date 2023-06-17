@@ -11,6 +11,12 @@ The [SerializeField] attribute in C# is used in Unity to indicate that a field s
 In Unity, serialization is the process of converting the state of an object into a format that can be stored, transmitted, or saved in the Unity editor. 
 This allows you to set the value of the field through the Unity editor interface.
 
+## Editor
+
+When selecting an object that is a Prefab, if you modify it it will modify every inheritance, 
+You can duplicate it to make another Prefab with the option, _right click -> Prefabs -> "Unpack completely"_ 
+This option is useful when you want to make unique modifications to a Prefab instance without affecting other instances.
+
 ## Sprites
 When you edited a sprite, to make it as a template, put it in the Assets/Prefab folder, from the SampleScene list.
 
