@@ -7,11 +7,13 @@ public class Sword : MonoBehaviour
     [SerializeField] private GameObject slashAnimPrefab;
     [SerializeField] private Transform slashAnimSpawnPoint;
     [SerializeField] private Transform weaponCollider;
+    [SerializeField] private float swordAttackCD = .5f;
 
     private PlayerControls playerControls;
     private Animator myAnimator;
     private PlayerController playerController;
     private ActiveWeapon activeWeapon;
+    private bool attackButtonDown, isAttacking = false;
 
     private GameObject slashAnim;
 
@@ -29,20 +31,39 @@ public class Sword : MonoBehaviour
     void Start()
     {
         // Call Attack function on control input Attack
-        playerControls.Combat.Attack.started += _ => Attack(); // '_' synthax to not pass any parameters to the Attack ()
+        playerControls.Combat.Attack.started += _ => StartAttacking(); // '_' synthax to not pass any parameters to the coming function
+        playerControls.Combat.Attack.canceled += _ => StopAttacking();
     }
 
     private void Update() {
-        MouseFollowWithOffset(); 
+        MouseFollowWithOffset();
+        Attack();
+    }
+
+    private void StartAttacking() {
+        attackButtonDown = true;
+    }
+
+    private void StopAttacking() {
+        attackButtonDown = false;
     }
 
     private void Attack() {
-        myAnimator.SetTrigger("Attack");
-        weaponCollider.gameObject.SetActive(true);
+        if (attackButtonDown && !isAttacking) {
+            isAttacking = true;
+            myAnimator.SetTrigger("Attack");
+            weaponCollider.gameObject.SetActive(true);
 
-        slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity); // Quaternion to gives the same rotation as the prefab
-        // Set parent as active weapon in hierarchy
-        slashAnim.transform.parent = this.transform.parent;
+            slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity); // Quaternion to gives the same rotation as the prefab
+            // Set parent as active weapon in hierarchy
+            slashAnim.transform.parent = this.transform.parent;
+            StartCoroutine(AttackCDRoutine());
+        }
+    }
+
+    private IEnumerator AttackCDRoutine() {
+        yield return new WaitForSeconds(swordAttackCD);
+        isAttacking = false;
     }
 
     public void DoneAttackingAnimEvent() {

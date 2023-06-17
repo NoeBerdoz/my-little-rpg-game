@@ -11,6 +11,11 @@ The [SerializeField] attribute in C# is used in Unity to indicate that a field s
 In Unity, serialization is the process of converting the state of an object into a format that can be stored, transmitted, or saved in the Unity editor. 
 This allows you to set the value of the field through the Unity editor interface.
 
+## Player Controllers
+The player controllers is as a Player Controls type file
+There from the editor you set the keys and their calls, and you can call them in your scripts
+
+
 ## Editor
 
 When selecting an object that is a Prefab, if you modify it it will modify every inheritance, 
@@ -47,6 +52,9 @@ The "Is Trigger" option can be useful in situations where you want to detect whe
 
 #### Sorting Group
 This component allows you to control the rendering order of objects in a scene. When multiple objects are rendered on the screen, their order can affect how they are displayed, with objects that are closer to the camera appearing in front of objects that are farther away. The Sorting Group component allows you to specify a custom sorting order for a group of objects, which can be useful for creating complex 2D or 3D scenes.
+
+#### Trail Renderer
+The Trail Renderer is used to create dynamic trails behind moving objects, such as particle effects, projectile paths, or character movements, by rendering a series of fading segments based on the object's motion.
 
 ## Animations
 In Assets/Animations create a **Animator Controller**
@@ -112,7 +120,7 @@ This mode is useful for applying forces that happen instantly, such as forces fr
 
 ### Coroutine
 Anytime that you need something to work for only X amount of time, you need to set up a Coroutine
-Coroutines are defined using the IEnumerator return type
+Coroutines are defined using the **IEnumerator** return type
 Coroutine have to be called with *StartCoroutine()*
 in Coroutines the *yield return* statement is a key feature in coroutines that allows for sequential execution, pausing, and nesting of coroutines.
 
