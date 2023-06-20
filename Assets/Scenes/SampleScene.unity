@@ -1626,7 +1626,7 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
 --- !u!1001 &1255226492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2862,6 +2862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   dashSpeed: 4
+  myTrailRenderer: {fileID: 1216614648}
 --- !u!95 &1922842211
 Animator:
   serializedVersion: 5
