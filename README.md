@@ -58,6 +58,21 @@ This component allows you to control the rendering order of objects in a scene. 
 #### Trail Renderer
 The Trail Renderer is used to create dynamic trails behind moving objects, such as particle effects, projectile paths, or character movements, by rendering a series of fading segments based on the object's motion.
 
+#### Tilemap
+The Tilemap component in Unity is used to create and manage 2D tile-based environments. It provides a grid-based system where you can paint tiles onto the grid to define the visual layout and collision properties of your level.
+
+#### Tilemap Renderer
+The Tilemap Renderer component in Unity is responsible for rendering the visual representation of a Tilemap. It works in conjunction with the Tilemap component to display the painted tiles on the screen, applying any associated materials and textures to create the final visual output of the tile-based environmen
+
+#### Tilemap Collider 2D 
+The Tilemap Collider 2D component in Unity is used to define collision boundaries for a Tilemap. It allows game objects to interact with the tiles by detecting collisions and triggers. This component works hand-in-hand with the Tilemap component to provide accurate and efficient collision detection in a tile-based environment.
+
+#### Composite Collider 2D
+The Composite Collider 2D component in Unity is used to create a composite shape for collision detection in 2D physics simulations. It combines multiple colliders attached to a game object into a single collider, optimizing collision detection performance. This component is particularly useful for complex or irregularly shaped objects that require precise and efficient collision handling.
+
+## Tilemap Sprite Atlas
+When working with Tilemaps to create the maps element, sometimes the elements doesn't fit correctly together and it's making weird missing pixel lines, using the Tilemap Sprite Atlas object and putting the Tilemap image file that is concerned by dropping it in "Objects for packing" can resolve the issue (set the compression to *none*)
+
 ## Animations
 In Assets/Animations create a **Animator Controller**
 
@@ -133,6 +148,20 @@ https://game-endeavor.itch.io/mystic-woods
 https://arks.itch.io/dino-characters
 https://clembod.itch.io/warrior-free-animation-set
 https://penzilla.itch.io/hooded-protagonist
+https://elthen.itch.io/2d-pixel-art-gladiator-sprites
+https://deepdivegamestudio.itch.io/dragon-asset-pack
+
+Minifantasy free assets
+https://krishna-palacio.itch.io/minifantasy-forgotten-plains
+https://krishna-palacio.itch.io/minifantasy-dungeon
+
+Sprites generator
+https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/#?body=Body_color_light&head=Human_male_light
+
 ## Not free
 https://clembod.itch.io/cultist-enemy-pack 7.50$ (the Twisted one for invisible character)
 https://rafaelmatos.itch.io/epic-rpg-world-pack-old-prison-asset-tileset (What about the traps, could be a good idea to implement, like trap events)
+https://electriclemon.itch.io/ (Where there is this super beautiful Dragon)
+https://nyknck.itch.io/ (Pixel effects)
+https://itch.io/s/45421/minifantasy-complete-bundle (Literally the best complete one)
+https://itch.io/s/94077/minifantasy-creatures-bundle (Only creatures & effects from minifantasy)
