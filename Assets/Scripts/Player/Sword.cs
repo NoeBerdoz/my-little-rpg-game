@@ -26,6 +26,7 @@ public class Sword : MonoBehaviour
 
     private void OnEnable() {
         playerControls.Enable();
+        // TODO GET SHIT DONE;
     }
 
     void Start()
