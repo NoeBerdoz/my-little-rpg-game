@@ -16,7 +16,11 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T> // T parameter 
             instance = (T)this;
         }
 
-        DontDestroyOnLoad(gameObject); // Don't destroy object when loading a new scene
+        // Escape parent objects on scene
+        if (!gameObject.transform.parent) {
+            DontDestroyOnLoad(gameObject); // Don't destroy object when loading a new scene
+        }
+
 
     }
 }
