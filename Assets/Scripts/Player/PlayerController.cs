@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     // Set private value from public call
     public bool FacingLeft { get { return facingLeft; } }
-    public static PlayerController Instance;
 
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float dashSpeed = 4;
@@ -23,8 +22,10 @@ public class PlayerController : MonoBehaviour
     private bool facingLeft = false;
     private bool isDashing = false;
 
-    private void Awake() {
-        Instance = this;
+    // protected override instead of private as Singleton inheritance already hace Awake() method
+    protected override void Awake() {
+        base.Awake(); // call inheritance Awake() method 
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();

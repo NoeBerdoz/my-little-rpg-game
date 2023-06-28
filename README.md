@@ -141,6 +141,10 @@ Coroutines are defined using the **IEnumerator** return type
 Coroutine have to be called with *StartCoroutine()*
 in Coroutines the *yield return* statement is a key feature in coroutines that allows for sequential execution, pausing, and nesting of coroutines.
 
+## Scenes
+When working with scene, make sure to add the needed one on the build  
+File -> Build settings, there drag and drop scenes in "Scenes in build"
+
 # Game Assets
 ## Free
 https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack

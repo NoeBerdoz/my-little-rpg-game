@@ -14,12 +14,10 @@ public class TransparentDetection : MonoBehaviour
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Debug.Log("AWAKW MAN");
         tilemap = GetComponent<Tilemap>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("HELLO MAN");
         if (other.gameObject.GetComponent<PlayerController>()) {
             if(spriteRenderer) {
                 // Fade the tree
@@ -34,7 +32,6 @@ public class TransparentDetection : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        Debug.Log("Trigger Exit");
         if (spriteRenderer) {
             StartCoroutine(FadeRoutine(spriteRenderer, fadeTime, spriteRenderer.color.a, 1f));
         } else if (tilemap) {
