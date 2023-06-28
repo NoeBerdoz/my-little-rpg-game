@@ -145,6 +145,10 @@ in Coroutines the *yield return* statement is a key feature in coroutines that a
 When working with scene, make sure to add the needed one on the build  
 File -> Build settings, there drag and drop scenes in "Scenes in build"
 
+### Prefab
+Option Prefab -> Unpacking completely:   
+Unpacking a prefab can be useful when you want to modify the individual elements of a prefab or customize them further. After unpacking, you have full control over each component, allowing you to make changes without affecting other instances of the prefab. It also allows you to access and modify the properties and settings of each component directly.
+
 # Game Assets
 ## Free
 https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack
