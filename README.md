@@ -74,6 +74,8 @@ The Composite Collider 2D component in Unity is used to create a composite shape
 When working with Tilemaps to create the maps element, sometimes the elements doesn't fit correctly together and it's making weird missing pixel lines, using the Tilemap Sprite Atlas object and putting the Tilemap image file that is concerned by dropping it in "Objects for packing" can resolve the issue (set the compression to *none*)
 
 ## Animations
+When the object that is animated is not moving or in a none state, we call this an Idle animation.
+
 In Assets/Animations create a **Animator Controller**
 
 Add a Animator component to your Object, put the Controller on it, set the value for transitions and fixed duration to null.
