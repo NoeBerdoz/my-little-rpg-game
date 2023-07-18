@@ -164,17 +164,28 @@ https://penzilla.itch.io/hooded-protagonist
 https://elthen.itch.io/2d-pixel-art-gladiator-sprites
 https://deepdivegamestudio.itch.io/dragon-asset-pack
 
-Minifantasy free assets
+Minifantasy free assets  
 https://krishna-palacio.itch.io/minifantasy-forgotten-plains
 https://krishna-palacio.itch.io/minifantasy-dungeon
 
-Sprites generator
+Sprites generator  
 https://sanderfrenken.github.io/Universal-LPC-Spritesheet-Character-Generator/#?body=Body_color_light&head=Human_male_light
 
 ## Not free
-https://clembod.itch.io/cultist-enemy-pack 7.50$ (the Twisted one for invisible character)
-https://rafaelmatos.itch.io/epic-rpg-world-pack-old-prison-asset-tileset (What about the traps, could be a good idea to implement, like trap events)
-https://electriclemon.itch.io/ (Where there is this super beautiful Dragon)
-https://nyknck.itch.io/ (Pixel effects)
-https://itch.io/s/45421/minifantasy-complete-bundle (Literally the best complete one)
-https://itch.io/s/94077/minifantasy-creatures-bundle (Only creatures & effects from minifantasy)
+7.50$ (the Twisted one for invisible character)
+https://clembod.itch.io/cultist-enemy-pack   
+
+What about the traps, could be a good idea to implement, like trap events 
+https://rafaelmatos.itch.io/epic-rpg-world-pack-old-prison-asset-tileset 
+
+Where there is this super beautiful Dragon
+https://electriclemon.itch.io/ 
+
+Pixel effects
+https://nyknck.itch.io/ 
+
+Literally the best complete one  
+https://itch.io/s/45421/minifantasy-complete-bundle 
+
+Only creatures & effects from minifantasy  
+https://itch.io/s/94077/minifantasy-creatures-bundle
