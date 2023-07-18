@@ -70,6 +70,9 @@ The Tilemap Collider 2D component in Unity is used to define collision boundarie
 #### Composite Collider 2D
 The Composite Collider 2D component in Unity is used to create a composite shape for collision detection in 2D physics simulations. It combines multiple colliders attached to a game object into a single collider, optimizing collision detection performance. This component is particularly useful for complex or irregularly shaped objects that require precise and efficient collision handling.
 
+#### Grid Layout Group
+Useful for placing objects in a same way together, for example when placing boxes of an inventory in a x+y place
+
 ## Tilemap Sprite Atlas
 When working with Tilemaps to create the maps element, sometimes the elements doesn't fit correctly together and it's making weird missing pixel lines, using the Tilemap Sprite Atlas object and putting the Tilemap image file that is concerned by dropping it in "Objects for packing" can resolve the issue (set the compression to *none*)
 
