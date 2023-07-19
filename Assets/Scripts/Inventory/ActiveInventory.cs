@@ -41,6 +41,13 @@ public class ActiveInventory : MonoBehaviour
         
         // Set selected Active Highlight scene object to True
         this.transform.GetChild(indexNum).GetChild(0).gameObject.SetActive(true);
+        
+        ChangeActiveWeapon();
+    }
+
+    private void ChangeActiveWeapon()
+    {
+        Debug.Log(transform.GetChild(activeSlotIndexNum).GetComponent<InventorySlot>().GetWeaponInfo().weaponPrefab.name);
     }
     
 }
