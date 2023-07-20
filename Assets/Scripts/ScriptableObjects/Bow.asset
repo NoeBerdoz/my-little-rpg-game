@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9b1fb2232682541af275886b5a03b8, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 0}
-  weaponCooldown: 0
+  weaponPrefab: {fileID: 4746895889089865160, guid: b0231585f06b461dfa705897468fb6ca, type: 3}
+  weaponCooldown: 0.2

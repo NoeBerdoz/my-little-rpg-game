@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ActiveWeapon : Singleton<ActiveWeapon>
 {
-    [SerializeField] private MonoBehaviour currentActiveWeapon;
+    public MonoBehaviour CurrentActiveWeapon { get; private set; }
     
     private PlayerControls playerControls;
     private bool attackButtonDown, isAttacking = false;
@@ -34,6 +34,16 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
         Attack();
     }
 
+    public void NewWeapon(MonoBehaviour newWeapon)
+    {
+        CurrentActiveWeapon = newWeapon;
+    }
+
+    public void WeaponNull()
+    {
+        CurrentActiveWeapon = null;
+    }
+
     public void ToggleIsAttacking(bool value)
     {
         isAttacking = value;
@@ -54,7 +64,7 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
             isAttacking = true;
         
             // Call the Attack() function from the correct class through the IWeapon interface
-            (currentActiveWeapon as IWeapon).Attack();
+            (CurrentActiveWeapon as IWeapon).Attack();
         }
         
     }

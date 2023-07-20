@@ -10,6 +10,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float dashSpeed = 4;
     [SerializeField] private TrailRenderer myTrailRenderer;
+    [SerializeField] private Transform weaponCollider;
 
     private PlayerControls playerControls;
     // Store values incoming from player inputs 
@@ -50,6 +51,11 @@ public class PlayerController : Singleton<PlayerController>
     private void FixedUpdate() {
         AdjustPlayerFacingDirection();
         Move();
+    }
+
+    public Transform GetWeaponCollider()
+    {
+        return weaponCollider;
     }
 
     private void PlayerInput() {
