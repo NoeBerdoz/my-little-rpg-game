@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class Staff : MonoBehaviour, IWeapon
 {
+    [SerializeField] private WeaponInfo weaponInfo;
+
     public void Attack()
     {
         Debug.Log("Attacking with Staff");
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
 
     private void Update()
     {
         MouseFollowWithOffset();
     }
+    
+    public WeaponInfo GetWeaponInfo()
+    {
+        return weaponInfo;
+    }
+    
     
     // Make the staff flip horizontally depending on player position
     private void MouseFollowWithOffset() {
