@@ -67,7 +67,10 @@ public class ActiveInventory : MonoBehaviour
 
         GameObject newWeapon =
             Instantiate(weaponToSpawn, ActiveWeapon.Instance.transform.position, Quaternion.identity);
-
+        
+        // Reset rotation to 0 to get rid of weapon position bugs when switching
+        ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, 0);
+        
         // Set new weapon object
         newWeapon.transform.parent = ActiveWeapon.Instance.transform;
         ActiveWeapon.Instance.NewWeapon(newWeapon.GetComponent<MonoBehaviour>());
