@@ -5,23 +5,43 @@ using UnityEngine;
 public class Staff : MonoBehaviour, IWeapon
 {
     [SerializeField] private WeaponInfo weaponInfo;
+    [SerializeField] private GameObject magicLaser;
+    [SerializeField] private Transform magicLaserSpawnPoint;
 
+    private Animator myAnimator;
+    readonly int AttackHash = Animator.StringToHash("Attack");
+
+
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
+  
     public void Attack()
     {
-        Debug.Log("Attacking with Staff");
+        // Trigger parameter "Laser" is set on Idle animation parameters
+        myAnimator.SetTrigger(AttackHash);
+
+    }
+
+    private void SpawnStaffProjectileAnimEvent()
+    {
+        GameObject newLaser =
+            Instantiate(magicLaser, magicLaserSpawnPoint.position, Quaternion.identity);
+        // newLaser.GetComponent<Projectile>().UpdateWeaponInfo(weaponInfo);
+    }
+
+    public WeaponInfo GetWeaponInfo()
+    {
+        return weaponInfo;
     }
 
     private void Update()
     {
         MouseFollowWithOffset();
     }
-    
-    public WeaponInfo GetWeaponInfo()
-    {
-        return weaponInfo;
-    }
-    
-    
+
+
     // Make the staff flip horizontally depending on player position
     private void MouseFollowWithOffset() {
         Vector3 mousePos = Input.mousePosition;
