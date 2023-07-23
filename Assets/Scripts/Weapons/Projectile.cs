@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
-        Indesctructible indestructible = other.gameObject.GetComponent<Indesctructible>();
+        Indestructible indestructible = other.gameObject.GetComponent<Indestructible>();
         
         // Tree collider to escape has isTrigger checked
         if (!other.isTrigger && (enemyHealth || indestructible))
