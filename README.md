@@ -46,6 +46,11 @@ Methods of collision detection:
 #### Capsule Colider 2D
 type of collider in Unity that is used for 2D physics simulations. A Capsule Collider 2D is a 2D shape that is similar to a cylinder with rounded ends, and is often used to represent objects with a cylindrical or humanoid shape, such as characters or obstacles. When a Rigidbody2D component is attached to an object with a Capsule Collider 2D, it will be subject to physics simulations, such as gravity, collisions, and forces applied by other objects in the scene. The Capsule Collider 2D can be adjusted to fit the specific shape of the object it represents, allowing for precise collision detection and physics simulations.
 
+#### Rigidbody2D
+The Rigidbody2D component in Unity is used to apply physics-based movement and interactions to 2D GameObjects. It enables objects to be affected by forces like gravity, collisions, and impulses, allowing for realistic and dynamic movement and interaction in a 2D environment.
+It has two different collision mode option, **discrete** collision detection checks for collisions at fixed intervals, such as every frame or every update cycle, **continuous** collision detection checks for collisions along the entire trajectory of an object, such as a bullet or a fast-moving character.
+Use continuous collision detection for fast moving object, like an arrow for example.
+
 #### Polygon Collider 2D
 define collision shapes for 2D game objects. It allows you to create a polygonal shape that accurately matches the outline of your game object, which can be used for collision detection with other game objects in the scene.
 Use it when you need a precise collision shape.
