@@ -28,7 +28,7 @@ public class Staff : MonoBehaviour, IWeapon
     {
         GameObject newLaser =
             Instantiate(magicLaser, magicLaserSpawnPoint.position, Quaternion.identity);
-        // newLaser.GetComponent<Projectile>().UpdateWeaponInfo(weaponInfo);
+        newLaser.GetComponent<MagicLaser>().UpdateLaserRange(weaponInfo.weaponRange);
     }
 
     public WeaponInfo GetWeaponInfo()
