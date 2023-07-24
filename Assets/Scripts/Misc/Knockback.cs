@@ -5,6 +5,7 @@ using UnityEngine;
 public class Knockback : MonoBehaviour
 {
 
+    // Check to see if element is getting knocked back
     public bool GettingKnockedBack { get; private set; }
 
     [SerializeField] private float knockBackTime = .2f; 
