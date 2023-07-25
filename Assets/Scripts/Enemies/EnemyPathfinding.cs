@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class EnemyPathfinding : MonoBehaviour
 {
@@ -37,5 +40,10 @@ public class EnemyPathfinding : MonoBehaviour
 
     public void MoveTo(Vector2 targetPosition) {
         moveDirection = targetPosition;
+    }
+
+    public void StopMoving()
+    {
+        moveDirection = Vector3.zero;
     }
 }
