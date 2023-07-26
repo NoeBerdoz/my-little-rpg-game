@@ -844,32 +844,40 @@ PrefabInstance:
       value: Ghost (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
+      propertyPath: stagger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: restTime
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
+      propertyPath: oscillate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: burstCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
-      propertyPath: angleSpread
-      value: 359
-      objectReference: {fileID: 0}
-    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
-      propertyPath: bulletMoveSpeed
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
-      propertyPath: startingDistance
-      value: 0.1
+      propertyPath: angleSpread
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
-      propertyPath: timeBetweenBursts
+      propertyPath: bulletMoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
+      propertyPath: startingDistance
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
+      propertyPath: timeBetweenBursts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: projectilesPerBurst
-      value: 40
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
@@ -1478,7 +1486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3992354666187237711, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
+      propertyPath: stagger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: burstCount
@@ -20971,11 +20983,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3992354666187237711, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5894155114440882881, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: stopMovingWhileAttacking
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
+      propertyPath: stagger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7866613229717885742, guid: 12293cd74f52e6a399747a334118c0b2, type: 3}
       propertyPath: burstCount
