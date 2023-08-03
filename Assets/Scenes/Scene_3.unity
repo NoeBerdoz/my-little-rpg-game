@@ -207,14 +207,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5034700747089496203, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.5489136
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034700747089496203, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.1560805
-      objectReference: {fileID: 0}
     - target: {fileID: 5034700747562918490, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -263,21 +255,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5034700747752135623, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.5489136
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034700747752135623, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.1560805
-      objectReference: {fileID: 0}
     - target: {fileID: 5034700748764240518, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2101687053}
     - target: {fileID: 5034700748764240518, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
       propertyPath: m_ChildCameras.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1f379ade16d5a37496599fc88f77dc3, type: 3}
