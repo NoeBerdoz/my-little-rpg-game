@@ -126,6 +126,13 @@ You can add Event on animations that will call a specific function on a setted t
 This file type let's you set inputs Controllers, for example setting W for moving up, S for down, etc...
 You add an action map, then set an action with a key binding.
 
+## Unity custom types
+
+## Animation Curve
+Creates an animation curve from an arbitrary number of keyframes  
+It can be useful when creating a ballistic moving element directly as a [SerializeField]  
+Unity doc reference: [Animation Curve](https://docs.unity3d.com/ScriptReference/AnimationCurve.html)
+
 ## Useful Unity built-in functions
 
 ### Awake()

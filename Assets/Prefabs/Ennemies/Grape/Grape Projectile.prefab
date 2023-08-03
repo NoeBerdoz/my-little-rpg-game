@@ -163,3 +163,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   heightY: 5.5
   grapeProjectileShadow: {fileID: 430748688375526329, guid: d7b9c55e890c4b4a4ac7afce3c37f422, type: 3}
+  splatterPrefab: {fileID: 2172020108025209973, guid: 51771f04ed9f4cabca87fc772caf5ab8, type: 3}
