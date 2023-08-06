@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8312383660797333887}
   - component: {fileID: 8312383660797333884}
   - component: {fileID: 1020080317709630686}
+  - component: {fileID: -5149331232840487705}
   m_Layer: 0
   m_Name: Gold Coin
   m_TagString: Untagged
@@ -158,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2a7261ed1ccb126b91c76fb22eabd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpType: 0
   pickUpDistance: 4
   accelerationRate: 5
   moveSpeed: 0.2
@@ -187,3 +189,15 @@ MonoBehaviour:
     m_RotationOrder: 4
   heightY: 1.5
   popDuration: 0.5
+--- !u!114 &-5149331232840487705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312383660797333880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c229ef16b400f5ca9f1160fb220d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
