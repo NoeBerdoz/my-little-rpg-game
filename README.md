@@ -141,6 +141,7 @@ This function is called on an object when it is instantiated in the scene, befor
 ### Start()
 The goal of the Start() function is to initialize any data or components that require the object to be fully initialized before they can be set up, such as objects that depend on other objects or components.
 The Start() function is typically used for tasks that need to be performed once at the beginning of an object's lifetime, such as setting up initial game state, initializing data structures, or performing other setup tasks that require the object to be fully initialized.
+It's called after the Awake() function.
 
 ### Update()
 The goal of the Update() function is to update the state of the object and perform any necessary computations or calculations for the current frame.
