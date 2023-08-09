@@ -23,7 +23,7 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float popDuration = 1f;
 
     private Vector3 moveDirection;
-    private Rigidbody2D rigidbody2D;
+    private new Rigidbody2D rigidbody2D;
 
     private void Awake()
     {
@@ -94,14 +94,13 @@ public class Pickup : MonoBehaviour
         switch (pickUpType)
         {
             case PickUpType.GoldCoin:
-                Debug.Log("Picked up Gold Coin");
+                EconomyManager.Instance.UpdateCurrentGold();
                 break;
             case PickUpType.HealthGlobe:
-                Debug.Log("Picked up Health Globe");
                 PlayerHealth.Instance.HealPlayer();
                 break;
             case PickUpType.StaminaGlobe:
-                Debug.Log("Picked up Stamina Globe");
+                Stamina.Instance.RefreshStamina();
                 break;
         }
     }
