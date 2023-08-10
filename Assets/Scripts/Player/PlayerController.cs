@@ -38,10 +38,16 @@ public class PlayerController : Singleton<PlayerController>
     private void Start() {
         playerControls.Combat.Dash.performed += _ => Dash();
         startingMoveSpeed = moveSpeed;
+        ActiveInventory.Instance.EquipStartingWeapon();
     }
 
     private void OnEnable() {
         playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
     }
 
     // Handle Player input
@@ -70,8 +76,8 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
-        // Stop moving when getting knocked back
-        if (knockback.GettingKnockedBack)
+        // Stop moving when getting knocked back or when dying
+        if (knockback.GettingKnockedBack || PlayerHealth.Instance.isDead)
         {
             return;
         }

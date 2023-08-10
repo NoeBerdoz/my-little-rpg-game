@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveInventory : MonoBehaviour
+public class ActiveInventory : Singleton<ActiveInventory>
 {
     private int activeSlotIndexNum = 0;
 
     private PlayerControls playerControls;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        
         playerControls = new PlayerControls();
     }
 
@@ -25,6 +27,12 @@ public class ActiveInventory : MonoBehaviour
     private void OnEnable()
     {
         playerControls.Enable();
+    }
+
+    public void EquipStartingWeapon()
+    {
+        // Give sword when player spawns
+        ToggleActiveHighlight(0);
     }
 
     private void ToggleActiveSlot(int numValue)
