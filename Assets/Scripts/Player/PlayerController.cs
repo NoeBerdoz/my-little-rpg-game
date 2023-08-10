@@ -77,7 +77,7 @@ public class PlayerController : Singleton<PlayerController>
     private void Move()
     {
         // Stop moving when getting knocked back or when dying
-        if (knockback.GettingKnockedBack || PlayerHealth.Instance.isDead)
+        if (knockback.GettingKnockedBack || PlayerHealth.Instance.IsDead)
         {
             return;
         }

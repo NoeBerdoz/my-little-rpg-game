@@ -58,6 +58,12 @@ public class ActiveInventory : Singleton<ActiveInventory>
 
     private void ChangeActiveWeapon()
     {
+        // Disable change on player's death
+        if (PlayerHealth.Instance.IsDead)
+        {
+            return;
+        }
+        
         // Remove current weapon object before setting new one
         if (ActiveWeapon.Instance.CurrentActiveWeapon != null)
         {
