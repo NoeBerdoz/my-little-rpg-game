@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -66,9 +68,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
         {
             return; 
         }
-        
-        ScreenShakeManager.Instance.ShakeScreen();
-        
+
+        ApplyCameraDamageEffect();
         knockback.GetKnockedBack(hiTransform.gameObject.transform, knockBackThrustAmount);
         StartCoroutine(flash.FlashRoutine());
         canTakeDamage = false;
@@ -77,6 +78,12 @@ public class PlayerHealth : Singleton<PlayerHealth>
         UpdateHealthSlider();
         CheckIfPlayerDeath();
     }
+
+    private void ApplyCameraDamageEffect()
+    {
+        ScreenShakeManager.Instance.ShakeScreen();
+        ScreenShakeManager.Instance.ChangeVignetteColor();
+    } 
 
     private void CheckIfPlayerDeath()
     {
