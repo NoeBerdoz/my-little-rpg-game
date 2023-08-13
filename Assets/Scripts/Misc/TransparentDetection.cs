@@ -9,34 +9,34 @@ public class TransparentDetection : MonoBehaviour
     [SerializeField] private float transparencyAmount = 0.8f;
     [SerializeField] private float fadeTime = .4f;
 
-    private Renderer renderer;
+    private Renderer rendererComponent;
     
     private void Awake()
     {
-        renderer = GetComponent<Renderer>();
+        rendererComponent = GetComponent<Renderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.GetComponent<PlayerController>()) { 
             // Fade object
-            StartCoroutine(FadeRoutine(renderer, fadeTime, renderer.material.color.a, transparencyAmount));
+            StartCoroutine(FadeRoutine(rendererComponent, fadeTime, rendererComponent.material.color.a, transparencyAmount));
         }    
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.GetComponent<PlayerController>()) { 
             // Unfade object
-            StartCoroutine(FadeRoutine(renderer, fadeTime, renderer.material.color.a, 1f));
+            StartCoroutine(FadeRoutine(rendererComponent, fadeTime, rendererComponent.material.color.a, 1f));
         }
     }
 
-    private IEnumerator FadeRoutine(Renderer renderer, float fadeTime, float startValue, float targetTransparency) {
+    private IEnumerator FadeRoutine(Renderer rendererValue, float fadeTimeValue, float startValue, float targetTransparency) {
         float elapsedTime = 0;
-        while (elapsedTime < fadeTime)
+        while (elapsedTime < fadeTimeValue)
         {
             elapsedTime += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(startValue, targetTransparency, elapsedTime / fadeTime);
-            renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, newAlpha);
+            float newAlpha = Mathf.Lerp(startValue, targetTransparency, elapsedTime / fadeTimeValue);
+            rendererValue.material.color = new Color(rendererValue.material.color.r, rendererValue.material.color.g, rendererValue.material.color.b, newAlpha);
             yield return null;
         }
     }
