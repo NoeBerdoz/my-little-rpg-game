@@ -121,6 +121,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2e04fa9a-352b-4257-be47-879b9216b8d2",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9a6ae439-091d-4da7-aa3f-bf90109fbef1",
                     "path": "<Keyboard>/space",
                     "interactions": "",
