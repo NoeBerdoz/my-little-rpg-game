@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : Singleton<PlayerController>
 {
@@ -86,18 +87,48 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     private void AdjustPlayerFacingDirection() {
+        
+        if (Application.isMobilePlatform)
+        {
+            AdjustFacingForMobile();
+        }
+        else
+        {
+            AdjustFacingForDesktop();
+        }
+    }
 
+    private void AdjustFacingForDesktop()
+    {
         Vector3 mousePosition = Input.mousePosition;
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position); // transform is the built-in component information
 
         if (mousePosition.x < playerScreenPoint.x) {
-            mySpriteRender.flipX = true;
-            facingLeft = true;
-        } else {
-            mySpriteRender.flipX = false;
-            facingLeft = false;
-        }
+           SetFacingDirection(true);
+        } else
+        {
+            SetFacingDirection(false);
+        }   
+    }
 
+    private void AdjustFacingForMobile()
+    {
+        float joystickInputX = Gamepad.current.leftStick.x.value;
+        
+        if (joystickInputX < 0f)
+        { 
+            SetFacingDirection(true);
+        }
+        else 
+        {
+            SetFacingDirection(false);
+        }
+    }
+
+    private void SetFacingDirection(bool faceLeft)
+    {
+        mySpriteRender.flipX = faceLeft;
+        facingLeft = faceLeft;
     }
 
     private void Dash() {
