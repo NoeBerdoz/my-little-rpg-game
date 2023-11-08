@@ -1,5 +1,14 @@
 # WebGL Export
-https://sharemygame.com/@nb_share/my-little-rpg-game
+You can try my game here:
+[https://sharemygame.com/@nb_share/my-little-rpg-game
+](https://sharemygame.com/@nb_share/my-little-rpg-game-v1)
+
+How to play?  
+[Left click] - Attack  
+[1], [2], [3] - Choose weapon  
+[W] [A] [S] [D] - Moves  
+[Space] - Dash  
+Enjoy!  
 
 # Unity Notes
 Always check [the docs](https://docs.unity3d.com/)
