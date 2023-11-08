@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class ActiveInventory : Singleton<ActiveInventory>
 {
@@ -18,7 +19,14 @@ public class ActiveInventory : Singleton<ActiveInventory>
 
     private void Start()
     {
-        playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
+        if (Application.isMobilePlatform)
+        {
+            // Here should be the logic for getting the mobile game inputs as float  
+        }
+        else
+        {
+            playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
+        }
         
         // Set the sword as default start weapon
         ToggleActiveHighlight(0);
